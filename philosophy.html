@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>理念・想い | 譲渡型保護猫カフェ ぷここん家</title>
+  <meta name="description" content="ぷここん家の理念と想い。保護猫活動17年の歩みと、行き場のない猫たちの居場所づくりへの思いを綴ります。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ============================
+       Philosophy Page Specific
+       ============================ */
+    .philosophy-hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--gradient-hero);
+      padding: 140px 20px 80px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .philosophy-hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/philosophy_hero.png') center/cover no-repeat;
+      opacity: 0.18;
+    }
+    .philosophy-hero-content {
+      position: relative; z-index: 1;
+      max-width: 700px;
+    }
+    .philosophy-hero-content h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .philosophy-hero-content .hero-lead {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 2;
+    }
+
+    .philosophy-section {
+      padding: 80px 0;
+    }
+    .philosophy-section:nth-child(odd) {
+      background: var(--white);
+    }
+    .philosophy-section:nth-child(even) {
+      background: var(--gradient-section);
+    }
+
+    .philosophy-block {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .philosophy-block-with-image {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .philosophy-block-with-image.reverse {
+      direction: rtl;
+    }
+    .philosophy-block-with-image.reverse > * {
+      direction: ltr;
+    }
+
+    .philosophy-image {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 4px solid rgba(255,255,255,0.7);
+    }
+    .philosophy-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform .5s ease;
+    }
+    .philosophy-image:hover img {
+      transform: scale(1.03);
+    }
+
+    .philosophy-text p {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 2.2;
+      margin-bottom: 20px;
+    }
+    .philosophy-text p:last-child {
+      margin-bottom: 0;
+    }
+    .philosophy-text strong {
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+
+    .philosophy-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    }
+    .philosophy-list li {
+      padding: 10px 0 10px 28px;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text-light);
+      line-height: 1.8;
+    }
+    .philosophy-list li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.8rem;
+    }
+
+    .philosophy-quote {
+      background: var(--sub-light);
+      border-left: 4px solid var(--sub);
+      padding: 20px 28px;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--sub-dark);
+      font-size: 0.9rem;
+      line-height: 1.9;
+    }
+
+    .philosophy-highlight {
+      background: var(--gradient-accent);
+      color: #fff;
+      padding: 40px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .philosophy-highlight p {
+      font-size: 1.1rem;
+      line-height: 2;
+      margin-bottom: 0;
+    }
+    .philosophy-highlight strong {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .philosophy-services {
+      max-width: 600px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .philosophy-service-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      border: 1px solid rgba(91,181,162,0.1);
+      transition: transform .3s, box-shadow .3s;
+    }
+    .philosophy-service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    .philosophy-service-card i {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .philosophy-service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .philosophy-service-card p {
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    .philosophy-back {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .philosophy-block-with-image {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .philosophy-block-with-image.reverse {
+        direction: ltr;
+      }
+      .philosophy-hero {
+        min-height: auto;
+        padding: 120px 16px 60px;
+      }
+      .philosophy-services {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="assets/logo.jpg" alt="ぷここん家ロゴ" class="header-logo-img">
+        <span class="header-logo-text">ぷここん家</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html#about" class="nav-link">お店について</a></li>
+          <li><a href="index.html#guide" class="nav-link">はじめての方へ</a></li>
+          <li><a href="index.html#pricing" class="nav-link">料金システム</a></li>
+          <li><a href="index.html#menu" class="nav-link">カフェメニュー</a></li>
+          <li><a href="index.html#cats" class="nav-link">猫スタッフ</a></li>
+          <li><a href="index.html#access" class="nav-link">営業日・アクセス</a></li>
+          <li><a href="index.html#faq" class="nav-link">Q&A</a></li>
+        </ul>
+      </nav>
+      <a href="https://www.instagram.com/pucocnchi_1122/" target="_blank" class="nav-ig-btn" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="philosophy-hero">
+    <div class="philosophy-hero-bg"></div>
+    <div class="philosophy-hero-content reveal">
+      <span class="section-tag">Philosophy</span>
+      <h1>🌿 理念・想い</h1>
+      <p class="hero-lead">保護猫活動を始めて、約17年。<br>すべては、雨の日に出会った一匹の子猫から始まりました。</p>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 1: はじまり ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-block-with-image reveal">
+        <div class="philosophy-image">
+          <img src="assets/philosophy_hero.png" alt="雨の日の子猫との出会い">
+        </div>
+        <div class="philosophy-text">
+          <p>一般的な保護活動では、TNR（捕獲・不妊去勢・元の場所に戻す）という方法が広く行われています。私自身も活動初期には取り組んだことがありますが、どうしても「元の場所に戻す（Return）」という選択ができませんでした。</p>
+          <p>一度出会ってしまった命を、元の厳しい環境に戻すことができず、結果として自宅で引き受ける形になる——それが自分の性格であり、限界でもあると気づきました。</p>
+          <p>それ以来、私はTNRではなく、<strong>「預かり」</strong>という形で命を守る活動を続けています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 2: 障がいのある猫たち ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-block-with-image reverse reveal">
+        <div class="philosophy-image">
+          <img src="assets/philosophy_disabled_cat.png" alt="障がいのある猫のケア">
+        </div>
+        <div class="philosophy-text">
+          <p>活動を始めて間もない頃、偶然、下半身不随の猫を保護したことがありました。</p>
+          <p>圧迫排尿を学び、日々のケアを続ける中で、「この子たちを支えることこそ、自分にできる役割なのではないか」と強く感じるようになりました。</p>
+          <p>それからは、</p>
+          <ul class="philosophy-list">
+            <li>持病のある子</li>
+            <li>事故などで身体に障がいを負った子</li>
+            <li>里親が見つかりにくい子たち</li>
+          </ul>
+          <p>そういった、行き場を失いやすい猫たちを中心に預かる活動へと、自然に形が変わっていきました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 3: 困難との戦い ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-block reveal">
+        <div class="philosophy-text">
+          <p>しかしその一方で、SNS上では</p>
+          <div class="philosophy-quote">
+            「支援を集めるために、あえて可哀想な猫を選んでいるのではないか」
+          </div>
+          <p>という心ない言葉を向けられたこともあります。</p>
+          <p>長い間誹謗中傷が続き、深く傷つき、すべてをやめてしまいたいと思ったこともありました。</p>
+          <p>それでも、ブログを通じて出会った方々や友人、仲間たちの温かい言葉に支えられ、ここまで活動を続けることができました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 4: カフェ誕生 ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-block-with-image reveal">
+        <div class="philosophy-image">
+          <img src="assets/philosophy_cafe_birth.png" alt="ぷここん家の誕生">
+        </div>
+        <div class="philosophy-text">
+          <p>お店が誕生したきっかけは、コロナ禍でした。</p>
+          <p>それまで個人ブログを通して多くの方に支えられてきましたが、コロナの影響でご支援が大きく減少し、猫たちの生活を維持することが難しくなっていきました。</p>
+          <p>このままでは多頭崩壊になってしまう——そう感じた私は、初めてクラウドファンディングに挑戦しました。</p>
+          <p>そして多くの方のご支援により、<strong>2021年11月22日（猫の日）</strong>に「譲渡型保護猫カフェ ぷここん家」をオープンすることができました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 5: リニューアル ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-block reveal">
+        <div class="philosophy-text">
+          <p>猫たちの人懐っこさにも支えられ、多くのお客様にご来店いただきながら、4年間続けてくることができました。</p>
+          <p>しかし、保護猫たち特有のトイレ問題などにより、店内の環境面での課題（特に臭いの問題）も抱えるようになりました。</p>
+          <p>本来であればすぐに改善すべきことでしたが、経営的には決して余裕がある状態ではなく、簡単には手を入れられない状況が続いていました。</p>
+          <p>それでも「猫たちのために、より良い環境を整えたい」という思いから、再びクラウドファンディングに挑戦させていただきました。</p>
+          <p>その結果、再び多くの方に支えていただき、<strong>2026年1月3日</strong>、無事にリニューアルオープンすることができました。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 6: これからの取り組み ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-block-with-image reverse reveal">
+        <div class="philosophy-image">
+          <img src="assets/philosophy_future.png" alt="新しい取り組み">
+        </div>
+        <div class="philosophy-text">
+          <p>現在は、</p>
+          <ul class="philosophy-list">
+            <li>猫ヨガ（北九州では当店のみ）</li>
+            <li>娘と一緒に考案した「猫ネコソフトクリーム」</li>
+            <li>夜の時間も楽しめる夜カフェ</li>
+          </ul>
+          <p>など、新しい取り組みも取り入れながら、<strong>「無理なく続けられる保護活動の形」</strong>を模索しています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 7: メッセージ ========== -->
+  <section class="philosophy-section">
+    <div class="container">
+      <div class="philosophy-highlight reveal">
+        <p>保護猫活動は、理想だけでは続きません。<br>
+        だからこそ、現実と向き合いながら、<br>
+        <strong>人と猫が共に心地よく過ごせる場所を<br>作り続けていきたい</strong>と考えています。</p>
+      </div>
+      <div class="philosophy-block reveal" style="margin-top: 50px;">
+        <div class="philosophy-text" style="text-align: center;">
+          <p>これからも「ぷここん家」は、<br>
+          行き場のない猫たちにとっての居場所であり、<br>
+          訪れてくださる方にとっても、<br>
+          <strong>心が少し軽くなるような場所</strong>でありたいと思っています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SECTION 8: サービス案内 ========== -->
+  <section class="philosophy-section" id="services">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-tag">Services</span>
+        <h2>その他のサービス</h2>
+      </div>
+      <p class="menu-intro reveal">以下のサービスも承っております。お気軽にご相談ください。</p>
+      <div class="philosophy-services reveal">
+        <a href="hotel.html" class="philosophy-service-card" style="text-decoration:none; color:inherit; display:block;">
+          <i class="fa-solid fa-hotel"></i>
+          <h3>猫ホテル</h3>
+          <p>お出かけ時の猫ちゃんの<br>お預かりを承ります</p>
+        </a>
+        <a href="lifetime.html" class="philosophy-service-card" style="text-decoration:none; color:inherit; display:block;">
+          <i class="fa-solid fa-heart"></i>
+          <h3>終生飼育</h3>
+          <p>やむを得ない事情で<br>飼育困難になった場合のご相談</p>
+        </a>
+      </div>
+
+      <div class="philosophy-back reveal">
+        <a href="index.html" class="btn-secondary">
+          <i class="fa-solid fa-arrow-left"></i> トップページに戻る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="ロゴ" class="footer-logo-img">
+          <div>
+            <h3>譲渡型保護猫カフェ ぷここん家</h3>
+            <p>皆様のご来店が、猫たちの命を繋ぐ大きな支援となります。</p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/pucocnchi_1122/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="tel:05013911319" aria-label="電話"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ぷここん家 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

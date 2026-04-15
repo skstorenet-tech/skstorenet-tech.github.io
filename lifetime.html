@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>終生飼育のご相談 | 譲渡型保護猫カフェ ぷここん家</title>
+  <meta name="description" content="大切な猫ちゃんが最期まで安心して過ごせる場所。ぷここん家では、事情により飼育困難になった猫ちゃんの終生飼育のお預かりを行っています。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;800&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ============================
+       Lifetime Page Specific
+       ============================ */
+    .hotel-hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex; align-items: center; justify-content: center;
+      background: var(--gradient-hero);
+      padding: 140px 20px 80px;
+      overflow: hidden;
+      text-align: center;
+    }
+    .hotel-hero-content {
+      position: relative; z-index: 1;
+      max-width: 700px;
+    }
+    .hotel-hero-content h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      background: var(--gradient-accent);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+    .hotel-hero-content .hero-lead {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 2;
+    }
+
+    .hotel-section {
+      padding: 60px 0;
+    }
+    .hotel-section:nth-child(odd) {
+      background: var(--gradient-section);
+    }
+    .hotel-section:nth-child(even) {
+      background: var(--white);
+    }
+
+    .hotel-block {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--white);
+      padding: 40px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(91,181,162,0.1);
+    }
+    
+    .hotel-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent-light);
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hotel-text p {
+      font-size: 1rem;
+      color: var(--text-main);
+      line-height: 2.2;
+      margin-bottom: 16px;
+    }
+    .hotel-text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .hotel-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+      background: var(--sub-light);
+      padding: 20px;
+      border-radius: var(--radius-sm);
+    }
+    .hotel-list li {
+      padding: 8px 0 8px 28px;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      line-height: 1.8;
+    }
+    .hotel-list li::before {
+      content: '🐾';
+      position: absolute;
+      left: 0;
+      font-size: 0.8rem;
+    }
+
+    .hotel-price {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent-dark);
+      margin: 20px 0;
+      padding: 20px;
+      background: var(--white);
+      border-radius: var(--radius);
+      border: 2px dashed var(--accent);
+    }
+    
+    .highlight-box {
+      background: var(--gradient-accent);
+      color: #fff;
+      padding: 30px;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 30px 0;
+    }
+    .highlight-box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .highlight-box p {
+      color: #fff;
+    }
+    .highlight-box .price {
+      font-size: 2rem;
+      font-weight: 800;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .hotel-back {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .hotel-block {
+        padding: 24px;
+      }
+      .hotel-hero {
+        min-height: auto;
+        padding: 120px 16px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="assets/logo.jpg" alt="ぷここん家ロゴ" class="header-logo-img">
+        <span class="header-logo-text">ぷここん家</span>
+      </a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html#about" class="nav-link">お店について</a></li>
+          <li><a href="index.html#guide" class="nav-link">はじめての方へ</a></li>
+          <li><a href="index.html#pricing" class="nav-link">料金システム</a></li>
+          <li><a href="index.html#menu" class="nav-link">カフェメニュー</a></li>
+          <li><a href="index.html#cats" class="nav-link">猫スタッフ</a></li>
+          <li><a href="index.html#access" class="nav-link">営業日・アクセス</a></li>
+          <li><a href="index.html#faq" class="nav-link">Q&A</a></li>
+        </ul>
+      </nav>
+      <a href="https://www.instagram.com/pucocnchi_1122/" target="_blank" class="nav-ig-btn" aria-label="Instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hotel-hero">
+    <div class="hotel-hero-content reveal">
+      <span class="section-tag">Lifetime Care</span>
+      <h1>❤️ 終生飼育について</h1>
+      <p class="hero-lead">大切な猫ちゃんが最期まで安心して過ごせる場所として、<br>責任をもってお預かりいたします。</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTENT ========== -->
+  <section class="hotel-section">
+    <div class="container reveal">
+      <div class="hotel-block">
+        <div class="hotel-text">
+          <p>高齢者の方の施設入所やご逝去などにより、大切な猫ちゃんの行き先がなくなってしまうケースが増えています。</p>
+          <p>ぷここん家では、そのような猫ちゃんの終生飼育のご相談を承っております。</p>
+          <p>約17年の保護活動の中で、高齢の猫ちゃんや病気の猫ちゃんも、お預かりしてきました。現在も終生飼育の猫ちゃん（猫白血病ウイルス感染症の子を含む）6匹が、ぷここん家（別部屋）で穏やかに生活しています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel-section">
+    <div class="container reveal">
+      <div class="hotel-block">
+        <h2 class="hotel-title"><i class="fa-regular fa-sun"></i> 終生飼育の猫ちゃんの暮らし</h2>
+        <div class="hotel-text">
+          <p>毎日健康チェックを行います。</p>
+          <p>ぷここん家では、白血病の猫ちゃんを除き、終生飼育の猫ちゃんも猫カフェの猫ちゃん達と一緒に生活しています。</p>
+          <p>ケージで過ごすのではなく、他の猫たちと自由に過ごしながら、人との触れ合いもある環境で穏やかな日々を送っています。</p>
+          <p>また、元飼い主様が会いに来られることも可能です。実際に、再会した猫ちゃんと元飼い主様が涙を流される場面もありました。</p>
+          <p>終生飼育でお預かりした猫ちゃんは、大切にお世話をさせていただき、体調の変化にも気を配りながら、必要に応じて適切な医療を行っております。<br>また、最期の時まで責任をもってお預かりし、看取り・火葬までこちらで対応させていただきます。<br><small>(個別火葬の場合は、別途費用をいただきます)</small></p>
+          <p>飼い主様にとって、大切な家族である猫ちゃんが、最後まで安心して過ごせる場所として責任をもってお預かりいたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel-section">
+    <div class="container reveal">
+      <div class="hotel-block">
+        <h2 class="hotel-title"><i class="fa-solid fa-cat"></i> 実際の終生飼育の例</h2>
+        <div class="hotel-text">
+          <p>現在お預かりしている猫ちゃんの中には、12歳の時にお預かりし、現在15歳になった子もいます。</p>
+          <p>現在は腎不全の治療として1日おきの点滴とサプリメントを続けています。元気に他の猫たちと一緒に生活しています。</p>
+          <p>このように、病気や高齢の猫ちゃんでも、その子に合ったケアを行いながら穏やかに過ごしています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel-section">
+    <div class="container reveal">
+      <div class="hotel-block">
+        <h2 class="hotel-title"><i class="fa-solid fa-yen-sign"></i> 終生飼育費用について</h2>
+        <div class="hotel-text">
+          <p>終生飼育の費用は、猫ちゃんの年齢をもとに算出しております。</p>
+          <p>保護猫の平均寿命は15〜20年と言われている事から、目安として猫の平均寿命を17歳と想定し、現在の年齢から残り年数を計算し、月額換算した費用を一括払いでお願いしております。</p>
+          <p>終生飼育費用には通常の医療費も含まれており、原則として追加費用はいただいておりません。</p>
+          <p><small>※猫ちゃんの健康状態や特別な医療が必要な場合は別途ご相談させていただく場合がございます。</small></p>
+          
+          <p style="margin-top: 32px; font-weight: 700; color: var(--text-main);">【白血病の猫ちゃんについて】</p>
+          <p>猫白血病ウイルス感染症の猫ちゃんにつきましては、医療費やケアの負担を考慮し、一律 20万円 にて終生飼育を承っております。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel-section">
+    <div class="container reveal">
+      <div class="hotel-block">
+        <h2 class="hotel-title"><i class="fa-solid fa-circle-info"></i> その他</h2>
+        <div class="hotel-text">
+          <ul class="hotel-list">
+            <li>複数頭の場合は割引を適用する場合があります</li>
+            <li>元飼い主様の面会ももちろん可能です</li>
+            <li>受け入れ状況によりお断りする場合もございます</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel-section">
+    <div class="container reveal">
+      <div class="hotel-block" style="text-align: center; border: none; box-shadow: none; background: transparent;">
+        <h2 style="font-size: 1.5rem; color: var(--accent-dark); margin-bottom: 20px;">まずはお気軽にご相談ください。</h2>
+        <a href="tel:05013911319" class="btn-hero"><i class="fa-solid fa-phone"></i> お電話でのご相談はこちら</a>
+      </div>
+      
+      <div class="hotel-back reveal">
+        <a href="index.html" class="btn-secondary">
+          <i class="fa-solid fa-arrow-left"></i> トップページに戻る
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.jpg" alt="ロゴ" class="footer-logo-img">
+          <div>
+            <h3>譲渡型保護猫カフェ ぷここん家</h3>
+            <p>皆様のご来店が、猫たちの命を繋ぐ大きな支援となります。</p>
+          </div>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/pucocnchi_1122/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="tel:05013911319" aria-label="電話"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ぷここん家 All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
